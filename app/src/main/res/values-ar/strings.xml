@@ -60,5 +60,6 @@
 
     <string name="job">Job</string>
     <string name="age">Age</string>
+    <string name="gender">Gender</string>
 
 </resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:background="@drawable/box_6"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/logo"/>
+
+    <Button
+        android:onClick="reggClick"
+        android:id="@+id/cust_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volunteer"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:elevation="5px"
+        android:textSize="25dp"
+        android:drawableLeft="@drawable/volunt"
+        android:padding="25dp"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:background="@drawable/box_1"/>
+
+    <Button
+        android:onClick="reggClick"
+        android:id="@+id/store_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User"
+        android:textAllCaps="false"
+        android:textColor="#C80C4B"
+        android:textSize="25dp"
+        android:padding="25dp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="20dp"
+        android:drawableLeft="@drawable/user"
+        android:background="@drawable/gradient_move"/>
+
+</LinearLayout>

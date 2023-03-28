@@ -31,7 +31,8 @@
                 android:text="@string/logo"
                 android:textStyle="bold"
                 android:textAlignment="center"
-                android:textColor="#FB8C00"
+                android:textColor="#F06292"
+                android:fontFamily="@font/masque"
                 />
             <EditText
                 android:id="@+id/log_user"
@@ -59,24 +60,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:hint="@string/usertype"
                     android:padding="10dp"
-                    android:textSize="18sp"
-                    android:background="@drawable/box_7"
-                    android:layout_margin="10dp"
-                    android:textColor="#fff"
-                    />
-                <Spinner
+                    android:textColor="#B60340"
+                    android:textSize="18sp" />
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:padding="10dp"
-                    android:textSize="18sp"
-                    android:background="@drawable/box_2"
-                    android:entries="@array/users"
-                    android:layout_margin="10dp"/>
+                    android:orientation="vertical"
+                    android:background="@drawable/box_3"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginHorizontal="10dp"
+                    >
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:entries="@array/users"
+                        />
+                </LinearLayout>
+
             </LinearLayout>
 
 
@@ -98,12 +107,12 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Create a new account"
+                android:text="@string/register"
                 android:textAllCaps="false"
-                android:textColor="#3949AB"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:padding="13dp"
-                android:background="@drawable/box_2"/>
+                android:background="@drawable/gradient_move"/>
         </LinearLayout>
     </ScrollView>
 
