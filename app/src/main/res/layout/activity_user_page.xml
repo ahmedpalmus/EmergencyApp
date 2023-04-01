@@ -31,35 +31,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <Button
-                android:id="@+id/client_articles"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_margin="5dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/box_2"
-                android:padding="10dp"
-                android:fontFamily="@font/masque"
-                android:text="Articles"
-                android:textAllCaps="false"
-                android:textColor="#0723B3"
-                android:drawablePadding="10dp"
-
-                android:textSize="20sp" />
 
             <Button
-
+android:drawableLeft="@drawable/help"
+                android:elevation="5dp"
                 android:id="@+id/client_help"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/box_2"
+                android:background="@drawable/box_1"
                 android:textAllCaps="false"
                 android:fontFamily="@font/masque"
                 android:padding="10dp"
-                android:text="Help"
-                android:textColor="#0723B3"
+                android:text="Request help"
+                android:textColor="#fff"
                 android:drawablePadding="10dp"
                 android:textSize="20sp"/>
 
@@ -70,7 +56,7 @@
             android:orientation="horizontal">
 
             <Button
-
+android:drawableLeft="@drawable/article"
                 android:id="@+id/client_reqs"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -81,13 +67,19 @@
                 android:textAllCaps="false"
                 android:fontFamily="@font/masque"
                 android:padding="10dp"
-                android:text="Requests"
-                android:textColor="#0723B3"
+                android:text="Articles"
+                android:textColor="#C60144"
                 android:drawablePadding="10dp"
 
                 android:textSize="20sp"/>
-            <Button
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
+            <Button
+                android:drawableLeft="@drawable/video"
                 android:id="@+id/client_chat"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -98,8 +90,8 @@
                 android:textAllCaps="false"
                 android:fontFamily="@font/masque"
                 android:padding="10dp"
-                android:text="Chat"
-                android:textColor="#0723B3"
+                android:text="Videos"
+                android:textColor="#C60144"
                 android:drawablePadding="10dp"
 
                 android:textSize="20sp"/>
@@ -110,7 +102,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
-
+android:drawableLeft="@drawable/course"
                 android:id="@+id/client_admin"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -121,12 +113,19 @@
                 android:textAllCaps="false"
                 android:fontFamily="@font/masque"
                 android:padding="10dp"
-                android:text="Admin"
-                android:textColor="#0723B3"
+                android:text="Courses"
+                android:textColor="#C60144"
                 android:drawablePadding="10dp"
 
                 android:textSize="20sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
             <Button
+                android:drawableLeft="@drawable/prof"
                 android:id="@+id/client_prof"
                 android:textAllCaps="false"
                 android:layout_width="0dp"
@@ -138,7 +137,7 @@
                 android:padding="10dp"
                 android:fontFamily="@font/masque"
                 android:text="@string/profile"
-                android:textColor="#0723B3"
+                android:textColor="#C60144"
                 android:drawablePadding="10dp"
 
                 android:textSize="20sp"/>
