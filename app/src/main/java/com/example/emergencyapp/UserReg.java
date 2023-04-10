@@ -22,9 +22,9 @@ import java.util.Locale;
 public class UserReg extends AppCompatActivity {
 
     EditText userN, pass, pass2, perName, addr, phone, email;
-    TextView l1, l2, l3, l4, l5, l6, l7,l8;
+    TextView l1, l2, l3, l4, l5, l6, l7;
 Spinner gender;
-    String user, password, name, address, thePhone, Email, type = "user",gen="male";
+    String user, password, name, address, thePhone, Email, gen="male";
     String URL = Server.ip + "register.php";
     Button reg;
 
@@ -49,7 +49,6 @@ Spinner gender;
         l5 = findViewById(R.id.l5);
         l6 = findViewById(R.id.l6);
         l7 = findViewById(R.id.l7);
-        l8 = findViewById(R.id.l8);
 
 
         reg = findViewById(R.id.reg_reg);
@@ -80,8 +79,6 @@ Spinner gender;
             l6.setTextColor(Color.BLACK);
             l7.setText(getResources().getString(R.string.email));
             l7.setTextColor(Color.BLACK);
-            l8.setText(getResources().getString(R.string.gender));
-            l8.setTextColor(Color.BLACK);
 
             user = userN.getText().toString().trim();
             password = pass.getText().toString().trim();
@@ -177,11 +174,10 @@ Spinner gender;
                 HashMap<String, String> data = new HashMap<>();
                 data.put("username", params[0]);
                 data.put("password", params[1]);
-                data.put("type", params[2]);
-                data.put("name", params[3]);
-                data.put("address", params[4]);
-                data.put("phone", params[5]);
-                data.put("email", params[6]);
+                data.put("name", params[2]);
+                data.put("address", params[3]);
+                data.put("phone", params[4]);
+                data.put("email", params[5]);
                 data.put("gender", gen);
 
 
@@ -207,7 +203,7 @@ Spinner gender;
             }
         }
         RegAsync la = new RegAsync();
-        la.execute(user, password, type, name, address, thePhone, Email);
+        la.execute(user, password, name, address, thePhone, Email);
     }
 
     public boolean isValidEmail(CharSequence target) {

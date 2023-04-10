@@ -1,9 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminPage">
+    tools:context=".AdminPage"
+    android:background="@drawable/box_6"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:textSize="22sp"
+        android:layout_margin="10dp"
+        android:text="@string/logo"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#C8215A"
+        android:fontFamily="@font/masque"/>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:drawableLeft="@drawable/volunt"
+                android:id="@+id/client_reqs"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/box_2"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:fontFamily="@font/masque"
+                android:padding="10dp"
+                android:text="Volunteers"
+                android:textColor="#0328F6"
+                android:drawablePadding="10dp"
+
+                android:textSize="20sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:drawableLeft="@drawable/user"
+                android:id="@+id/client_chat"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/box_2"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:fontFamily="@font/masque"
+                android:padding="10dp"
+                android:text="Users"
+                android:textColor="#0328F6"
+                android:drawablePadding="10dp"
+
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:drawableLeft="@drawable/content"
+                android:id="@+id/client_admin"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/box_2"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:fontFamily="@font/masque"
+                android:padding="10dp"
+                android:text="Content"
+                android:textColor="#0328F6"
+                android:drawablePadding="10dp"
+
+                android:textSize="20sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:drawableLeft="@drawable/prof"
+                android:id="@+id/client_prof"
+                android:textAllCaps="false"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/box_2"
+                android:gravity="center"
+                android:padding="10dp"
+                android:fontFamily="@font/masque"
+                android:text="@string/profile"
+                android:textColor="#0328F6"
+                android:drawablePadding="10dp"
+
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

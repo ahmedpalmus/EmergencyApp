@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ArticleDetails"
+    android:orientation="vertical"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/post_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Article Title"
+                android:layout_marginTop="20dp"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:background="@drawable/gradient_move"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="5dp"
+                android:padding="-5dp"
+                android:layout_gravity="center"
+                android:elevation="10dp">
+
+                <ImageView
+                    android:id="@+id/roundedImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/article"
+                    android:background="@color/white"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#CDF6F5F5"
+                android:elevation="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/post_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="By: Maha Hassan"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    android:textAlignment="textStart"
+                    />
+                <TextView
+                    android:id="@+id/post_add"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="20/05/2022"
+                    android:padding="10dp"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    android:textAlignment="textEnd"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/post_det"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Article details"
+                android:textSize="17dp"
+                android:layout_marginBottom="10dp"
+                />
+            <Button
+                android:visibility="gone"
+                android:id="@+id/edit_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="18dp"
+                android:paddingHorizontal="10dp"
+                android:background="@drawable/gradient_green"
+                android:textColor="@color/white"
+                android:layout_margin="10dp"
+                android:text="Edit"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/post_comm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:hint="Type Your comment..."
+                    android:lines="3"
+                    android:textSize="17dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/empty_line"/>
+                <Button
+                    android:id="@+id/add_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:textSize="18dp"
+                    android:paddingHorizontal="10dp"
+                    android:background="@drawable/gradient_blue"
+                    android:textColor="@color/white"
+                    android:layout_marginHorizontal="10dp"
+                    android:drawableLeft="@drawable/add"
+                    android:text="Add Your Comment"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box_2"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/comments"
+                android:gravity="center"
+                android:text="Comments"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:padding="5dp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/comment_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

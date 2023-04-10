@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp"
+    android:layout_margin="5dp"
+    android:elevation="5dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_3"
+
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/comment_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/username"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:drawableLeft="@drawable/comments"
+            android:paddingHorizontal="10dp"
+            android:drawablePadding="5dp"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/comment_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="23/10/2021"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:textSize="16dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            />
+        <TextView
+            android:id="@+id/comment_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The comment"
+            android:gravity="center_vertical"
+            android:textSize="18dp"
+            android:paddingHorizontal="10dp"
+            android:paddingBottom="5dp"
+            android:textColor="#000"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

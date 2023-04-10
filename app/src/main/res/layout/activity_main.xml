@@ -78,6 +78,7 @@
                     android:layout_marginHorizontal="10dp"
                     >
                     <Spinner
+                        android:id="@+id/log_type"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:padding="10dp"
@@ -96,6 +97,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/login"
                 android:textAllCaps="false"
+                android:textAlignment="center"
                 android:textColor="#fff"
                 android:textSize="20dp"
                 android:padding="13dp"
@@ -107,11 +109,12 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/register"
+                android:text="Create a new account"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:padding="13dp"
+                android:textAlignment="center"
                 android:background="@drawable/gradient_move"/>
         </LinearLayout>
     </ScrollView>
