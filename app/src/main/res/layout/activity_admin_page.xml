@@ -35,7 +35,7 @@
 
             <Button
                 android:drawableLeft="@drawable/volunt"
-                android:id="@+id/client_reqs"
+                android:id="@+id/admin_volunt"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
@@ -58,7 +58,7 @@
 
             <Button
                 android:drawableLeft="@drawable/user"
-                android:id="@+id/client_chat"
+                android:id="@+id/admin_users"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
@@ -81,7 +81,7 @@
             android:orientation="horizontal">
             <Button
                 android:drawableLeft="@drawable/content"
-                android:id="@+id/client_admin"
+                android:id="@+id/admin_content"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
@@ -104,7 +104,7 @@
 
             <Button
                 android:drawableLeft="@drawable/prof"
-                android:id="@+id/client_prof"
+                android:id="@+id/admin_prof"
                 android:textAllCaps="false"
                 android:layout_width="0dp"
                 android:layout_weight="1"

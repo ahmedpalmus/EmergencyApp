@@ -41,8 +41,9 @@
 
                 <ImageView
                     android:id="@+id/roundedImageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+android:scaleType="fitXY"
                     android:src="@drawable/article"
                     android:background="@color/white"
                     />
@@ -71,7 +72,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="20/05/2022"
+                    android:text="20/05/2023"
                     android:padding="10dp"
                     android:textColor="#000"
                     android:textSize="18dp"
@@ -82,7 +83,7 @@
             <TextView
                 android:id="@+id/post_det"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:padding="10dp"
                 android:text="Article details"
                 android:textSize="17dp"
@@ -103,6 +104,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:orientation="vertical">
                 <EditText
                     android:id="@+id/post_comm"
@@ -130,6 +132,7 @@
 
 
             <TextView
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/box_2"
@@ -143,6 +146,7 @@
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
                 android:id="@+id/comment_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

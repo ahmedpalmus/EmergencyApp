@@ -121,7 +121,7 @@
                     android:textColor="#fff"
                     android:textSize="18dp"
                     android:padding="10dp"
-                    android:background="@drawable/box_1"
+                    android:background="@drawable/box_4"
                     android:layout_marginHorizontal="10dp"/>
                 <Button
                     android:visibility="gone"

@@ -42,7 +42,7 @@ public class ArticlesList extends AppCompatActivity {
         usertype=getIntent().getStringExtra("type");
         add = findViewById(R.id.post_add);
 
-        if(!usertype.equals("lawyer")){
+        if(!usertype.equals("admin")){
             add.setVisibility(View.GONE);
         }
         simpleList = findViewById(R.id.post_list);
@@ -106,7 +106,6 @@ public class ArticlesList extends AppCompatActivity {
                         for (int i = 0; i < allReq.length(); i++) {
                             JSONObject row = allReq.getJSONObject(i);
                             Post temp=new Post();
-
 
                             temp.setPost_id(row.getString("post_id"));
                             temp.setUser_id(row.getString("user_id"));

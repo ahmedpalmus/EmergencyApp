@@ -33,19 +33,22 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ArticleDetails extends AppCompatActivity {
-    String username,comment,usertype;
+    String username,usertype;
     Post post;
     TextView title,fullname,detail,add_date;
     ImageView imageView;
-    EditText cmnt;
-    ArrayList<Comment> comments;
-    private final String URL = Server.ip + "getComments.php";
-    private final String URL2 = Server.ip + "sendComment.php";
+    /*     EditText cmnt;
+        String comment;
+        ArrayList<Comment> conts;
+    /*    private final String URL = Server.ip + "getComments.php";
+        private final String URL2 = Server.ip + "sendComment.php";
 
-    private RecyclerView dRecycle;
-    private CommentAdapter dAdapter;
+        private RecyclerView dRecycle;
+        private CommentAdapter dAdapter;
+         Button add;
+     */
 
-    Button add,edit;
+    Button edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +63,8 @@ public class ArticleDetails extends AppCompatActivity {
         detail=findViewById(R.id.post_det);
         add_date=findViewById(R.id.post_add);
         imageView=findViewById(R.id.roundedImageView);
-        add=findViewById(R.id.add_comment);
-        cmnt=findViewById(R.id.post_comm);
+       // add=findViewById(R.id.add_comment);
+       // cmnt=findViewById(R.id.post_comm);
         edit=findViewById(R.id.edit_post);
 
         if(username.equals(post.getUser_id()) || usertype.equals("admin")){
@@ -80,7 +83,7 @@ public class ArticleDetails extends AppCompatActivity {
                 finish();
             }
         });
-        add.setOnClickListener(new View.OnClickListener() {
+/*        add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 comment=cmnt.getText().toString().trim();
@@ -90,7 +93,7 @@ public class ArticleDetails extends AppCompatActivity {
                     sendComment();
                 }
             }
-        });
+        });*/
 
         title.setText(post.getTitle());
         fullname.setText(post.getFullname());
@@ -98,10 +101,10 @@ public class ArticleDetails extends AppCompatActivity {
         add_date.setText(post.getAdd_date());
 
         getImage(post.getImage(), imageView);
-
-        comments = new ArrayList<>();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+/*        comments = new ArrayList<>();
+
 
         dRecycle = findViewById(R.id.comment_list);
         dRecycle.setHasFixedSize(true);
@@ -111,10 +114,10 @@ public class ArticleDetails extends AppCompatActivity {
         dAdapter = new CommentAdapter(comments);
 
         dRecycle.setAdapter(dAdapter);
-        getComments();
+        getComments();*/
 
     }
-
+/*
     private void sendComment() {
         class RegAsync extends AsyncTask<String, Void, String> {
             private Dialog loadingDialog;
@@ -198,7 +201,7 @@ public class ArticleDetails extends AppCompatActivity {
         Async la = new Async();
         la.execute();
     }
-
+*/
     public void getImage(final String img, final ImageView viewHolder) {
 
         class packTask extends AsyncTask<Void, Void, Bitmap> {
