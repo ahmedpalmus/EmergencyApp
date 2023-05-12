@@ -3,7 +3,39 @@ package com.example.emergencyapp.model;
 import java.io.Serializable;
 
 public class Post implements Serializable {
-    private String  post_id,fullname, user_id, title, details, add_date, image;
+    private String  post_id,fullname, user_id, title, details, add_date, image,place,period,contact,start;
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public String getPeriod() {
+        return period;
+    }
+
+    public void setPeriod(String period) {
+        this.period = period;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+
+    public String getStart() {
+        return start;
+    }
+
+    public void setStart(String start) {
+        this.start = start;
+    }
 
     public String getPost_id() {
         return post_id;

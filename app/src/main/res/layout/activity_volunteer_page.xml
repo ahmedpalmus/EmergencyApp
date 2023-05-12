@@ -28,21 +28,22 @@
         android:orientation="vertical">
 
         <Button
-            android:drawableLeft="@drawable/help"
-            android:elevation="5dp"
             android:id="@+id/client_help"
             android:layout_width="match_parent"
-            android:layout_margin="5dp"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:background="@drawable/box_1"
-            android:gravity="center"
-            android:textAllCaps="false"
+            android:drawableLeft="@drawable/help"
+            android:drawablePadding="10dp"
+            android:elevation="5dp"
             android:fontFamily="@font/masque"
+            android:gravity="center"
             android:padding="10dp"
             android:text="Requests"
+            android:textAllCaps="false"
             android:textColor="#fff"
-            android:drawablePadding="10dp"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,7 +51,7 @@
 
             <Button
                 android:drawableLeft="@drawable/article"
-                android:id="@+id/client_reqs"
+                android:id="@+id/client_articles"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
@@ -73,7 +74,7 @@
 
             <Button
                 android:drawableLeft="@drawable/video"
-                android:id="@+id/client_chat"
+                android:id="@+id/client_vids"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
@@ -96,7 +97,7 @@
             android:orientation="horizontal">
             <Button
                 android:drawableLeft="@drawable/course"
-                android:id="@+id/client_admin"
+                android:id="@+id/client_course"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"

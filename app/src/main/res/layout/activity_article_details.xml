@@ -27,27 +27,21 @@
                 android:text="Article Title"
                 android:layout_marginTop="20dp"
                 android:textColor="#fff"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:textStyle="bold"
                 android:background="@drawable/gradient_move"/>
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
+            <ImageView
+                android:id="@+id/roundedImageView"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/article"
+                android:background="@color/white"
                 android:layout_margin="5dp"
                 android:padding="-5dp"
                 android:layout_gravity="center"
-                android:elevation="10dp">
-
-                <ImageView
-                    android:id="@+id/roundedImageView"
-                    android:layout_width="150dp"
-                    android:layout_height="200dp"
-android:scaleType="fitXY"
-                    android:src="@drawable/article"
-                    android:background="@color/white"
-                    />
-            </androidx.cardview.widget.CardView>
+                android:elevation="10dp"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -64,7 +58,7 @@ android:scaleType="fitXY"
                     android:padding="10dp"
                     android:textStyle="bold"
                     android:textColor="#000"
-                    android:textSize="18dp"
+                    android:textSize="18sp"
                     android:textAlignment="textStart"
                     />
                 <TextView
@@ -90,21 +84,21 @@ android:scaleType="fitXY"
                 android:layout_marginBottom="10dp"
                 />
             <Button
-                android:visibility="gone"
                 android:id="@+id/edit_post"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:textAllCaps="false"
                 android:textSize="18dp"
-                android:paddingHorizontal="10dp"
+                android:padding="10dp"
                 android:background="@drawable/gradient_green"
                 android:textColor="@color/white"
                 android:layout_margin="10dp"
+                android:textAlignment="center"
                 android:text="Edit"/>
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
                 android:orientation="vertical">
                 <EditText
                     android:id="@+id/post_comm"

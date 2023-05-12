@@ -31,8 +31,9 @@ public class ContentPage extends AppCompatActivity {
         courses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ContentPage.this, ContentPage.class);
+                Intent intent = new Intent(ContentPage.this, CourseList.class);
                 intent.putExtra("id", id);
+                intent.putExtra("type", "admin");
                 startActivity(intent);
             }
         });

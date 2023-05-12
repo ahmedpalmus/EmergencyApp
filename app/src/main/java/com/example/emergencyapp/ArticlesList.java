@@ -120,7 +120,7 @@ public class ArticlesList extends AppCompatActivity {
 
                         String res[] = new String[posts.size()];
                         for (int j = 0; j < posts.size(); j++) {
-                            res[j] =posts.get(j).getTitle()+"\nBy : "+posts.get(j).getFullname();
+                            res[j] =posts.get(j).getTitle()+"\nBy : "+posts.get(j).getAdd_date();
                         }
                         adapter= new ArrayAdapter<>(getApplicationContext(), R.layout.post_view, R.id.item_n, res);
                         simpleList.setAdapter(adapter);

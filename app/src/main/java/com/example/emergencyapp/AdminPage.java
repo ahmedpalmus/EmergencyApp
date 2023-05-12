@@ -34,6 +34,7 @@ public class AdminPage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(AdminPage.this, Profile.class);
                 intent.putExtra("id", id);
+                intent.putExtra("type", "admin");
                 startActivity(intent);
             }
         });
