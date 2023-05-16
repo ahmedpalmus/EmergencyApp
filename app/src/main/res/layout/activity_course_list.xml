@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:textSize="22sp"
-        android:text="List of Articles"
+        android:text="List of Courses"
         android:textAlignment="center"
         android:textColor="#311B92"
         android:fontFamily="@font/elephant"
