@@ -23,7 +23,8 @@ public class ContentPage extends AppCompatActivity {
         videos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Intent intent = new Intent(ContentPage.this, ContentPage.class);
+               Intent intent = new Intent(ContentPage.this, VideoList.class);
+                intent.putExtra("type", "admin");
                 intent.putExtra("id", id);
                 startActivity(intent);
             }
