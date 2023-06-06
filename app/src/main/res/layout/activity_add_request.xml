@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddRequest"
+    android:orientation="vertical"
+    android:background="@drawable/box_6"
+    android:padding="5dp"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="22sp"
+        android:text="Request Help"
+        android:textAlignment="center"
+        android:textColor="#311B92"
+        android:fontFamily="@font/elephant"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/l1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Emergency Details"
+                    android:padding="10dp"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal"/>
+
+            <EditText
+                android:id="@+id/help_details"
+                android:background="@drawable/box_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="top"
+                android:hint="Enter the details"
+                android:lines="4"
+                android:padding="10dp"
+                android:textSize="18dp" />
+            <TextView
+                android:id="@+id/l2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"
+                android:paddingHorizontal="5dp"
+                android:gravity="center_vertical"
+                android:textSize="18dp"
+                android:layout_marginHorizontal="10dp"
+                android:textColor="@color/black"
+
+                />
+            <EditText
+                android:background="@drawable/box_3"
+                android:id="@+id/reg_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:textSize="18dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:id="@+id/l3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/gender"
+                android:paddingHorizontal="5dp"
+                android:textColor="@color/black"
+
+                android:gravity="center_vertical"
+                android:textSize="18dp"
+                android:layout_marginHorizontal="10dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                android:background="@drawable/box_3"
+                android:layout_marginBottom="10dp"
+                android:layout_marginHorizontal="10dp"
+                >
+                <Spinner
+                    android:id="@+id/reg_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:textSize="20dp"
+                    android:entries="@array/gender"
+
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/empty_line"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="10dp"
+                android:paddingBottom="5dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/help_image"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:padding="10dp"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:text="Select Image"
+                    android:textAllCaps="false"
+                    android:background="@drawable/gradient_move"
+                    />
+
+            </LinearLayout>
+            <ImageView
+                android:padding="10dp"
+                android:id="@+id/add_pimage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/prof"
+                android:maxHeight="400dp"
+                android:scaleType="fitCenter"
+                />
+            <Button
+                android:id="@+id/help_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:textColor="#fff"
+                android:textSize="18dp"
+                android:text="Attach location"
+                android:textAllCaps="false"
+                android:background="@drawable/gradient_move"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+
+                >
+                <Button
+                    android:id="@+id/help_save"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:padding="10dp"
+                    android:background="@drawable/box_4"
+                    android:layout_marginHorizontal="10dp"/>
+                <Button
+                    android:id="@+id/help_cancel"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:padding="10dp"
+                    android:background="@drawable/box_5"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

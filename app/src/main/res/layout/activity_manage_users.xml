@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManageUsers"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:text="User's Management"
+        android:textAlignment="center"
+        android:textColor="#311B92"
+        />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/active"
+            android:layout_width="match_parent"
+            android:checked="true"
+            android:layout_height="wrap_content"
+            android:text="Active Users"
+            android:background="@drawable/gradient_light"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:textColor="@color/black"/>
+        <RadioButton
+            android:id="@+id/block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blocked Users"
+            android:background="@drawable/gradient_light"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:textColor="@color/black"/>
+
+    </RadioGroup>
+    <ListView
+        android:layout_marginVertical="10dp"
+        android:id="@+id/req_list5"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+
+</LinearLayout>

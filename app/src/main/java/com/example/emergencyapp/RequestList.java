@@ -14,8 +14,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.emergencyapp.model.HelpRequest;
 import com.example.emergencyapp.model.Post;
-import com.example.emergencyapp.model.Vid;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,25 +24,25 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class VideoList extends AppCompatActivity {
+public class RequestList extends AppCompatActivity {
     String id,usertype;
     ListView simpleList;
     ArrayAdapter<String> adapter;
 
-    public ArrayList<Vid> posts;
-    private final String URL = Server.ip + "getvideos.php";
+    public ArrayList<HelpRequest> posts;
+    private final String URL = Server.ip + "getreqs.php";
 
     Button add;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_video_list);
+        setContentView(R.layout.activity_request_list);
         id=getIntent().getStringExtra("id");
         usertype=getIntent().getStringExtra("type");
         add = findViewById(R.id.post_add);
 
-        if(!usertype.equals("admin")){
+        if(!usertype.equals("user")){
             add.setVisibility(View.GONE);
         }
         simpleList = findViewById(R.id.post_list);
@@ -51,7 +51,7 @@ public class VideoList extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(VideoList.this, AddVideo.class);
+                Intent intent = new Intent(RequestList.this, AddRequest.class);
                 intent.putExtra("id",id);
                 intent.putExtra("op_type","add");
                 intent.putExtra("usertype",usertype);
@@ -73,7 +73,7 @@ public class VideoList extends AppCompatActivity {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                loadingDialog = ProgressDialog.show(VideoList.this, "please waite...", "Connecting....");
+                loadingDialog = ProgressDialog.show(RequestList.this, "please waite...", "Connecting....");
             }
 
             @Override
@@ -81,6 +81,7 @@ public class VideoList extends AppCompatActivity {
                 Connection con = new Connection();
                 HashMap<String, String> data = new HashMap<>();
                 data.put("id", id);
+                data.put("usertype", usertype);
 
                 String result = con.sendPostRequest(URL, data);
                 return result;
@@ -105,29 +106,33 @@ public class VideoList extends AppCompatActivity {
                         JSONArray allReq = new JSONArray(result);
                         for (int i = 0; i < allReq.length(); i++) {
                             JSONObject row = allReq.getJSONObject(i);
-                            Vid temp=new Vid();
+                            HelpRequest temp=new HelpRequest();
 
-                            temp.setVideo_id(row.getString("video_id"));
-                            temp.setTitle(row.getString("title"));
+                            temp.setFullname(row.getString("fullname"));
+                            temp.setReq_id(row.getString("req_id"));
+                            temp.setUsername(row.getString("username"));
                             temp.setDetails(row.getString("details"));
-                            temp.setVid_url(row.getString("vid_url"));
-                            temp.setAdd_time(row.getString("add_time"));
-
+                            temp.setImage(row.getString("image"));
+                            temp.setPhone(row.getString("phone"));
+                            temp.setGender(row.getString("gender"));
+                            temp.setAdd_date(row.getString("add_date"));
+                            temp.setLat(row.getString("lat"));
+                            temp.setLon(row.getString("lon"));
                             posts.add(temp);
 
                         }
 
                         String res[] = new String[posts.size()];
                         for (int j = 0; j < posts.size(); j++) {
-                            res[j] =posts.get(j).getTitle()+"\nBy : "+posts.get(j).getAdd_time();
+                            res[j] =posts.get(j).getFullname()+"\nBy : "+posts.get(j).getAdd_date();
                         }
-                        adapter= new ArrayAdapter<>(getApplicationContext(), R.layout.vid_view, R.id.item_n, res);
+                        adapter= new ArrayAdapter<>(getApplicationContext(), R.layout.post_view, R.id.item_n, res);
                         simpleList.setAdapter(adapter);
                         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                             @Override
                             public void onItemClick(AdapterView<?> parent, View view, int position, long idd) {
 
-                                Intent intent = new Intent(VideoList.this, VideoDetails.class);
+                                Intent intent = new Intent(RequestList.this, RequestDetails.class);
                                 intent.putExtra("id",id);
                                 intent.putExtra("post", posts.get(position));
                                 intent.putExtra("usertype",usertype);

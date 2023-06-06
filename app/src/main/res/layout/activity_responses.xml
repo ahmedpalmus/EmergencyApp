@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VideoList"
+    tools:context=".ArticlesList"
     android:orientation="vertical"
     >
     <TextView
@@ -12,23 +12,12 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:textSize="22sp"
-        android:text="List of Videos"
+        android:text="List of Responses"
         android:textAlignment="center"
         android:textColor="#311B92"
         android:fontFamily="@font/elephant"
         />
-    <Button
-        android:id="@+id/post_add"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:textSize="18sp"
-        android:textColor="#311B92"
-        android:drawableLeft="@drawable/add"
-        android:text="Add a new Video"
-        android:background="@drawable/box_2"
-        android:textAllCaps="false" />
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/post_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

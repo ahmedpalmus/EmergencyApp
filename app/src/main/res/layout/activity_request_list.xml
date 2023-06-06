@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VideoList"
+    tools:context=".ArticlesList"
     android:orientation="vertical"
     >
     <TextView
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:textSize="22sp"
-        android:text="List of Videos"
+        android:text="List of Articles"
         android:textAlignment="center"
         android:textColor="#311B92"
         android:fontFamily="@font/elephant"
@@ -25,7 +25,7 @@
         android:textSize="18sp"
         android:textColor="#311B92"
         android:drawableLeft="@drawable/add"
-        android:text="Add a new Video"
+        android:text="Add a new request"
         android:background="@drawable/box_2"
         android:textAllCaps="false" />
     <ListView

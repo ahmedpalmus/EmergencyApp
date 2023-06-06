@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".AddCourse"
     android:orientation="vertical"
+    android:background="@drawable/box_6"
+    android:padding="5dp"
     >
     <TextView
         android:layout_width="match_parent"

@@ -25,9 +25,10 @@ public class VolunteerPage extends AppCompatActivity {
         reqs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               /* Intent intent = new Intent(AdminPage.this, ManageUsers.class);
+               Intent intent = new Intent(VolunteerPage.this, RequestList.class);
                 intent.putExtra("id", id);
-                startActivity(intent);*/
+                intent.putExtra("type", "volunteer");
+                startActivity(intent);
             }
         });
         profile.setOnClickListener(new View.OnClickListener() {
@@ -61,10 +62,10 @@ public class VolunteerPage extends AppCompatActivity {
         videos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               /* Intent intent = new Intent(VolunteerPage.this, QuestionList.class);
+                Intent intent = new Intent(VolunteerPage.this, VideoList.class);
                 intent.putExtra("id", id);
-                intent.putExtra("type", "admin");
-                startActivity(intent);*/
+                intent.putExtra("type", "volunteer");
+                startActivity(intent);
             }
         });
 

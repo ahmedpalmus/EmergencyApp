@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddArticle"
+    tools:context=".AddVideo"
     android:orientation="vertical"
     >
     <TextView
@@ -61,12 +61,11 @@
                 android:padding="5dp"
                 >
                 <Button
-                    android:onClick="vidSave"
                     android:id="@+id/vid_save_1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/save"
+                    android:text="@string/check"
                     android:textAllCaps="false"
                     android:background="@drawable/gradient_light"
                     android:textColor="#311B92"
@@ -77,7 +76,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
                     android:hint="YouTube Video link here"
-                    android:enabled="false"
                     />
 
             </LinearLayout>

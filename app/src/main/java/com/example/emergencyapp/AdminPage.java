@@ -24,9 +24,10 @@ public class AdminPage extends AppCompatActivity {
         volunt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               /* Intent intent = new Intent(AdminPage.this, ManageUsers.class);
+               Intent intent = new Intent(AdminPage.this, ManageUsers.class);
                 intent.putExtra("id", id);
-                startActivity(intent);*/
+                intent.putExtra("user_type", "volunteer");
+                startActivity(intent);
             }
         });
         profile.setOnClickListener(new View.OnClickListener() {
@@ -41,10 +42,10 @@ public class AdminPage extends AppCompatActivity {
         users.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               /* Intent intent = new Intent(AdminPage.this, QuestionList.class);
+                Intent intent = new Intent(AdminPage.this, ManageUsers.class);
                 intent.putExtra("id", id);
-                intent.putExtra("type", "admin");
-                startActivity(intent);*/
+                intent.putExtra("user_type", "user");
+                startActivity(intent);
             }
         });
         content.setOnClickListener(new View.OnClickListener() {

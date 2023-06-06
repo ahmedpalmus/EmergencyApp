@@ -32,9 +32,9 @@
                 android:background="@drawable/gradient_move"/>
             <ImageView
                 android:id="@+id/roundedImageView"
-                android:layout_width="150dp"
-                android:layout_height="200dp"
-                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitCenter"
                 android:src="@drawable/article"
                 android:background="@color/white"
                 android:layout_margin="5dp"

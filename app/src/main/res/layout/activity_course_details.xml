@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".CourseDetails"
     android:orientation="vertical"
+    android:background="@drawable/box_6"
+    android:padding="5dp"
     >
     <ScrollView
         android:layout_width="match_parent"
@@ -24,12 +26,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/title"
+                    android:text="Course title"
                     android:padding="10dp"
-                    android:textColor="#000"
+                    android:textColor="#fff"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textAlignment="center"
+                    android:background="@drawable/gradient_move"
+                    android:layout_margin="10dp"
                     />
 
             </LinearLayout>
@@ -64,7 +68,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="..."
+                    android:text="Abha "
                     android:padding="10dp"
                     android:textColor="#000"
                     android:textSize="16sp"
@@ -92,7 +96,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="..."
+                    android:text="2 months"
                     android:padding="10dp"
                     android:textColor="#000"
                     android:textSize="16sp"
@@ -121,7 +125,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="..."
+                    android:text="26/06/2023"
                     android:padding="10dp"
                     android:textColor="#000"
                     android:textSize="16sp"
@@ -135,10 +139,11 @@
                 android:layout_weight="1"
                 android:text="Contact Details"
                 android:padding="10dp"
-                android:textColor="#000"
+                android:textColor="#fff"
                 android:textSize="16sp"
-                android:background="#F1EFEF"
+                android:background="@drawable/box_1"
                 android:layout_marginHorizontal="10dp"
+
                 />
             <TextView
                 android:layout_marginHorizontal="10dp"
@@ -164,9 +169,9 @@
                     android:layout_weight="1"
                     android:text="Course Details"
                     android:padding="10dp"
-                    android:textColor="#000"
+                    android:textColor="#fff"
                     android:textSize="16sp"
-                    android:background="#F1EFEF"
+                    android:background="@drawable/box_1"
                     android:layout_marginHorizontal="10dp"
                     />
                 <TextView
@@ -193,7 +198,6 @@
 
             >
             <Button
-                android:visibility="gone"
                 android:id="@+id/mem_edit"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -203,7 +207,7 @@
                 android:textColor="#fff"
                 android:textSize="16sp"
                 android:padding="10dp"
-                android:background="@drawable/gradient_move"
+                android:background="@drawable/gradient_green"
                 android:layout_marginHorizontal="10dp"/>
 
 
