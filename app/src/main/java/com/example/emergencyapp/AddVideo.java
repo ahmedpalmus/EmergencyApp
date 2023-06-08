@@ -65,10 +65,6 @@ public class AddVideo extends AppCompatActivity {
 
         l1 = findViewById(R.id.l1);
 
-
-        save = findViewById(R.id.po_save);
-        cancel = findViewById(R.id.po_cancel);
-
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -117,7 +113,6 @@ public class AddVideo extends AppCompatActivity {
     public void Save() {
 
         title = etitle.getText().toString().trim();
-        vid1_url = evid_url.getText().toString().trim();
 
         details = edetail.getText().toString().trim();
 

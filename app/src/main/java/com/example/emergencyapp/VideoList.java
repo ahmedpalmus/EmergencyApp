@@ -91,7 +91,7 @@ public class VideoList extends AppCompatActivity {
                 loadingDialog.dismiss();
                 posts.clear();
                 String res1[] = new String[0];
-                adapter= new ArrayAdapter<>(getApplicationContext(), R.layout.post_view, R.id.item_n, res1);
+                adapter= new ArrayAdapter<>(getApplicationContext(), R.layout.vid_view, R.id.item_n, res1);
                 simpleList.setAdapter(adapter);
                 adapter.clear();
                 adapter.notifyDataSetChanged();
