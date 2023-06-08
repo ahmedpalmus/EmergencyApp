@@ -198,6 +198,7 @@
 
             >
             <Button
+                android:visibility="gone"
                 android:id="@+id/mem_edit"
                 android:layout_width="0dp"
                 android:layout_weight="1"
